@@ -21,6 +21,8 @@ ab12a       false
 
 abcdefgh       false
 
+12ab34cd       false
+
 ab12cd45    true
 
 ab12cd45ef  true
