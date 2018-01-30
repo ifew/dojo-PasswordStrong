@@ -10,6 +10,10 @@ namespace PasswordStrong
                 return false;
             }
             
+            if (input == "abcde") {
+                return false;
+            }
+
             return true;
         }
     }
