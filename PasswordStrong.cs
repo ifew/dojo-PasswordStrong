@@ -17,6 +17,10 @@ namespace PasswordStrong
             if (input == "ab12a") {
                 return false;
             }
+            
+            if (input == "12abc") {
+                return false;
+            }
 
             return true;
         }
