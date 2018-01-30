@@ -17,6 +17,10 @@ ab12a       false
 
 12abc       false
 
+12345678       false
+
+abcdefgh       false
+
 ab12cd45    true
 
 ab12cd45ef  true
