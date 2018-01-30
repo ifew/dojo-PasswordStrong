@@ -58,7 +58,7 @@ namespace PasswordStrong
             PasswordStrong passwordStrong = new PasswordStrong();
             bool actual = passwordStrong.CheckCondition(input);
 
-            Assert.True(actual);
+            Assert.False(actual);
         }
         
         [Fact]
@@ -69,7 +69,18 @@ namespace PasswordStrong
             PasswordStrong passwordStrong = new PasswordStrong();
             bool actual = passwordStrong.CheckCondition(input);
 
-            Assert.True(actual);
+            Assert.False(actual);
+        }
+        
+        [Fact]
+        public void Input_12ab34cd_Should_Be_Display_True()
+        {
+            string input = "12ab34cd";
+
+            PasswordStrong passwordStrong = new PasswordStrong();
+            bool actual = passwordStrong.CheckCondition(input);
+
+            Assert.False(actual);
         }
         
         [Fact]
