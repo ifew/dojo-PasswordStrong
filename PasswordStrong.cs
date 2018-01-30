@@ -6,23 +6,28 @@ namespace PasswordStrong
     {
         public bool CheckCondition(string input)
         {
-            if (input == "1234") {
-                return false;
+            bool intValid = false;
+            bool stringValid = false;
+            var charInput = input.ToCharArray();
+
+            if(charInput.Length >= 8) {
+                for(int lenght=0; lenght < charInput.Length; lenght++ ) {
+                    
+                    if(Char.IsLetter(charInput[lenght])) {
+                        stringValid = true;
+                    }
+
+                    if(Char.IsDigit(charInput[lenght])) {
+                        intValid = true;
+                    }
+
+                    if(intValid && stringValid) {
+                        return true;
+                    }
+                }
             }
 
-            if (input == "abcde") {
-                return false;
-            }
-            
-            if (input == "ab12a") {
-                return false;
-            }
-            
-            if (input == "12abc") {
-                return false;
-            }
-
-            return true;
+            return false;
         }
     }
 }
