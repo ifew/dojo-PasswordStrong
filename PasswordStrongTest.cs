@@ -37,5 +37,15 @@ namespace PasswordStrong
 
             Assert.False(actual);
         }
+
+        public void Input_12abc_Should_Be_Display_False()
+        {
+            string input = "12abc";
+
+            PasswordStrong passwordStrong = new PasswordStrong();
+            bool actual = passwordStrong.CheckCondition(input);
+
+            Assert.False(actual);
+        }
     }
 }
