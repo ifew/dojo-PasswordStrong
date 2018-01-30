@@ -20,9 +20,7 @@ namespace PasswordStrong
                         stringValid = true;
                     }
 
-                    if(Char.IsDigit(charInput[lenght])) {
-                        intValid = true;
-                    }
+                    intValid = CharIsDigit(charInput[lenght]);
 
                     if(intValid && stringValid) {
                         return true;
@@ -30,6 +28,14 @@ namespace PasswordStrong
                 }
             }
 
+            return false;
+        }
+
+        public bool CharIsDigit(char input) {
+            if(Char.IsDigit(input)) {
+                return true;
+            }
+        
             return false;
         }
     }
