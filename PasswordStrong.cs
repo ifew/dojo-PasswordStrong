@@ -12,6 +12,9 @@ namespace PasswordStrong
 
             if(charInput.Length >= 8) {
                 for(int lenght=0; lenght < charInput.Length; lenght++ ) {
+                    if(Char.IsDigit(charInput[0])) {
+                        return false;
+                    }
                     
                     if(Char.IsLetter(charInput[lenght])) {
                         stringValid = true;
